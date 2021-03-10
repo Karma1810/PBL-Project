@@ -186,6 +186,7 @@ h2{
   font-size: 15px;
   width: 80%;
   margin-bottom: 2em;
+  font-weight: bold;
 }
 #name{
   border: none;
@@ -195,6 +196,7 @@ h2{
   font-size: 15px;
   width: 80%;
   margin-bottom: 2em;
+  font-weight: bold;
 }
 #message{
   border: none;
@@ -202,6 +204,7 @@ h2{
   background: none;
   color: black;
   font-size: 15px;
+  font-weight: bold;
   width: 80%;
   margin: 1em;
 }
@@ -223,6 +226,13 @@ h2{
   cursor: pointer;
   text-transform: uppercase;
   background:#007af3;
+}
+
+label{
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: black;
 }
 .contact-left{
   padding-left: 0;
