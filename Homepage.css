@@ -64,7 +64,8 @@ section{
 }
 
 .subhead{
-  padding-left: 19em;
+  position: relative;
+  margin-left: 21em;
   padding-bottom: 3em;
   color: gray;
   word-spacing: 2em;
@@ -184,7 +185,7 @@ h2{
   color: black;
   font-size: 15px;
   width: 80%;
-  margin: 0 10px;
+  margin-bottom: 2em;
 }
 #name{
   border: none;
@@ -193,7 +194,7 @@ h2{
   color: black;
   font-size: 15px;
   width: 80%;
-  margin: 0 10px;
+  margin-bottom: 2em;
 }
 #message{
   border: none;
@@ -202,7 +203,7 @@ h2{
   color: black;
   font-size: 15px;
   width: 80%;
-  margin: 0 10px;
+  margin: 2em;
 }
 #send-message-cta{
   display: block;
@@ -216,15 +217,33 @@ h2{
   cursor: pointer;
 }
 .contact-left{
-  padding: 1em;
+  padding-left: 0;
   float: left;
   background-color: #e8e1ffad;
   border-radius: 2em;
-  margin-bottom: 2em;
 }
 h3{
   color: rgb(208, 241, 15);
   opacity: 0.6;
+}
+
+.site-footer {
+  background: orange;
+}
+
+#footer-content {
+  background: #20272e;
+  color: white;
+  margin-top: 21em;
+  padding-top: 1em;
+  text-align: center;
+}
+
+.footer-text-cta{
+  line-height: 0.2em;
+  font-size: medium;
+  padding: 0%;
+
 }
 
 /*# sourceMappingURL=try1.css.map *
