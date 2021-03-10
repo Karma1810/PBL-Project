@@ -115,18 +115,34 @@ img{
 .features-section{
   background-color: #20272e;
   color: white;
+  margin:0;
+  line-height: 3em;
+  padding: 5em;
 }
 .reviews-section{
   padding-bottom: 1em;
 }
 .now{
   padding: 0;
-  margin-left: 4em;
   color: white;
   text-decoration: none;
   font-style: bold;
   font-size: 1.5em;
   line-height: 2em;
+  text-transform: capitalize;
+  letter-spacing: 0.3em;
+  word-spacing: 0.8em;
+  position: relative;
+}
+
+.now:before{
+  content: '';
+   left: -1.3em;
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   background-image: url('../images/tickmark.jpg');
+   background-size: contain;
 }
 
 h2{
