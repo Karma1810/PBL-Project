@@ -203,18 +203,26 @@ h2{
   color: black;
   font-size: 15px;
   width: 80%;
-  margin: 2em;
+  margin: 1em;
 }
 #send-message-cta{
+  color:#F2F2F2;
   display: block;
   border: none;
   margin-right: 30px;
   margin-left:  20px;
+  margin-bottom: 1.5em;
   outline: none;
   border: 2px solid gray;
-  border-radius: 8px;
-  font-size: 15px;
+  border-radius: 1em;
+  font-size: 1.2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
   cursor: pointer;
+  text-transform: uppercase;
+  background:#007af3;
 }
 .contact-left{
   padding-left: 0;
