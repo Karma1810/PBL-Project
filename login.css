@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
 }
-<<<<<<< HEAD
 body{
     font-family:Georgia, 'Times New Roman', Times, serif;
     margin: 0;
@@ -10,10 +9,8 @@ body{
     background: url(images/login.jpg) no-repeat;
     background-size: cover;
 }
-=======
 
 
->>>>>>> 46ea996c2ed538bd16b73370a6e4bf52f8e0619a
 section{
     display: flex;
     flex-direction: row-reverse;
@@ -22,11 +19,9 @@ section{
     height: 100vh;
     display: flex;
 }
-<<<<<<< HEAD
 section .content{
 
     display: flex;
-=======
 section .imgbx{
     position: relative;
     width: 50%;
@@ -40,12 +35,10 @@ section .imgbx img{
 }
 section .content{
     
->>>>>>> 46ea996c2ed538bd16b73370a6e4bf52f8e0619a
     justify-content: center;
     align-items: center;
     width: 50%;
     height: 100%;
-<<<<<<< HEAD
 }
 section .content .formbx{
     width: 50%;
@@ -103,7 +96,6 @@ section .content .formbx .inputBx #signup{
 }
 section .content .formbx .inputBx #signup a{
     color: rgb(202, 38, 38);
-=======
 }*/
 
 body{
@@ -112,5 +104,4 @@ body{
     background-size: cover;
     background-position: center;
     height: 100vh;
->>>>>>> 46ea996c2ed538bd16b73370a6e4bf52f8e0619a
 }
