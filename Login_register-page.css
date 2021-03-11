@@ -3,112 +3,61 @@
     padding: 0px;
 }
 body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content{
     font-family:Georgia, 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
+    height: 100%;
+    width: 100%;
     background: linear-gradient(to bottom right,rgb(0,0,0,0.6),rgb(0,0,0,0.6) ) ,url(images/house-img.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    position: absolute;
 }
-section{
-    display: flex;
-    flex-direction: row-reverse;
+.content .formbx{
+    width: 380px;
+    height: 420px;
     position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
     overflow: hidden;
+    border-radius: 20px;
 }
-section .content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 50%;
-    margin-right: 24%;
-    overflow: hidden;
-}
-section .content .formbx{
-    width: 70%;
-    
-}
-section .content .formbx .btn-box{
-    padding: auto;
+.content .formbx .btn-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
     color: black;
-    margin-left: 30%;
-    margin-bottom: 10%;
+    box-shadow: 0 0 20px 9px #f75c1f1f;
 }
-section .content .formbx .btn-box .toggle-btn{
+.content .formbx .btn-box .toggle-btn{
     padding: 10px 30px;
     cursor: pointer;
     background: transparent;
     outline: none;
     border: 0;
     position: relative;
-    color: white;
+    color: black;
+    letter-spacing: 1px;
+    font-size: 13px;
     margin-top: 0;
 }
 #btn{
+    top: 0;
+    left: 0;
     position: absolute;
-    width: 90px;
-    height: 36px;
+    width: 110px;
+    height: 100%;
     border-radius: 30px;
     transition: 0.5s;
     background: linear-gradient(to right,orange,red);
 }
-
-/*
-section .content .formbx .inputBx{
-    margin-bottom: 20px;
-}
-section .content .formbx .inputBx span{
-    font-size: 20px;
-    display: inline-block;
-    margin-bottom: 5px;
-    color: black;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-section .content .formbx .inputBx input{
-    width: 100%;
-    padding: 10px 20px;
-    outline: none;
-    font-weight: 400;
-    border: 1px solid white;
-    border-radius: 30px;
-    font-size: 16px;
-    background:transparent;
-    color: white;
-    letter-spacing: 1px;
-}
-
-section .content .formbx .inputBx input[type="submit"]{
-    width: 60%;
-    margin-left: 3em;
-    margin-top: 20px;
-    border: none;
-    outline: none;
-    font-weight: 500;
-    background: rgb(238, 58, 58);
-    color: white;
-    cursor: pointer;
-}
-section .content .formbx .inputBx input[type="submit"]:hover{
-    background: red;
-}
-section .content .formbx .inputBx #signup{
-    color: rgb(77, 73, 73);
-    margin-top: 40px;
-    letter-spacing: 1px;
-}
-section .content .formbx .inputBx #signup a{
-    color: rgb(202, 38, 38);
-}*/
-
-
 .input-grp{
-    margin-left: 35%;
+    top: 180px;
+    width: 280px;
     position: absolute;
     transition: .5s;
 }
@@ -123,43 +72,34 @@ section .content .formbx .inputBx #signup a{
     border-bottom: 1px solid black;
     outline: none;
     background: transparent;
-    color: white;
-}
-.input-field1{
-    width: 60%;
-    padding: 10px 0px;
-    margin: 5px 0px;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid black;
-    outline: none;
-    background: transparent;
-    color: white;
+    color: rgb(19, 16, 16);
+    font-size: 15px;
 }
 .submit-btn{
-    color: thistle;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: black;
     cursor: pointer;
     display: block;
-    margin-top: 30px;
-    margin-left:36%;
+    margin: 24px auto;
     padding: 10px 30px;
-    width: 100px;
+    width: 50%;
     height: 40px;
-    border-radius: 20px;
-    border:0;
+    border-radius: 30px;
+    border: 0;
     outline: none;
-    background: linear-gradient(to right,orange,red)
+    background: linear-gradient(to right,orange,red);
 }
-.submit-btn .input[type="submit"]:hover{
-    background: red;
-    /*ithe ove wala karun de atul*/
+.submit-btn:hover{
+    background: linear-gradient(to right,rgb(252, 175, 33),rgb(250, 23, 23));
 }
 
 #login{
     left: 50px;
+    top : 150px
 }
 
 #register{
+    top : 100px;
     left:450px;
 }
