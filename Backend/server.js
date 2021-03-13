@@ -14,12 +14,31 @@ app.use(cors(
 
 const port = 5000;
 
-app.use('/user', userRouter);
+//app.use('/user', userRouter);
 
-app.get('/', (req, res) => {
-    res.status(200).json("Hello World");
+//app.get('/', (req, res) => {
+    //res.status(200).json("Hello World");
+//})
+
+//app.listen(port, () => {
+   // console.log(`Listening on port ${port}`)
+//})n
+
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'Durban@28',
+  database: 'login',
+  insecureAuth:'true'
 })
 
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
+connection.connect()
+
+connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
+  if (err) throw err
+
+  console.log('The solution is: ', rows[0].solution)
 })
+
+connection.end()
+
