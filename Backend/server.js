@@ -8,8 +8,8 @@ app.use(cors(
     {
         origin: "*", // allow the server to accept request from different origin
         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-        credentials: true // allow session cookie from browser to pass through
-    }
+     credentials: true // allow session cookie from browser to pass through
+}
 ));
 
 const port = 5000;
@@ -23,22 +23,19 @@ const port = 5000;
 //app.listen(port, () => {
    // console.log(`Listening on port ${port}`)
 //})n
+const {createConnection} =require('mysql')
 
-var connection = mysql.createConnection({
+const connect = createConnection({
   host: 'localhost',
   user: 'root',
   password: 'Durban@28',
   database: 'login',
-  insecureAuth:'true'
+
 })
 
-connection.connect()
-
-connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
-  if (err) throw err
-
-  console.log('The solution is: ', rows[0].solution)
+connect.query('select * from admin_login', function(err, result, fields) {
+    if (err) {
+        return console.log(err);
+    }
+    return console.log(result);
 })
-
-connection.end()
-
