@@ -20,6 +20,8 @@ body {
   margin-left: 17px;
 }
 nav{
+  position: fixed;
+  width: 100vw;
   background-color: white;
 }
 
