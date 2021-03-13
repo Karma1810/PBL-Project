@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right,rgb(0,0,0,0.6),rgb(0,0,0,0.6) ) ,url(images/house-img.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+}
+.content .formbx{
+    width: 380px;
+    height: 420px;
+    position: relative;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.content .formbx .btn-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+    color: black;
+    box-shadow: 0 0 20px 9px #f75c1f1f;
+}
+.content .formbx .btn-box .toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: 0;
+    position: relative;
+    color: black;
+    letter-spacing: 1px;
+    font-size: 13px;
+    margin-top: 0;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    border-radius: 30px;
+    transition: 0.5s;
+    background: linear-gradient(to right,orange,red);
+}
+.input-grp{
+    top: 180px;
+    width: 280px;
+    position: absolute;
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 5px 0px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+    color: rgb(19, 16, 16);
+    font-size: 15px;
+}
+.submit-btn{
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: black;
+    cursor: pointer;
+    display: block;
+    margin: 24px auto;
+    padding: 10px 30px;
+    width: 50%;
+    height: 40px;
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    background: linear-gradient(to right,orange,red);
+}
+.submit-btn:hover{
+    background: linear-gradient(to right,rgb(252, 175, 33),rgb(250, 23, 23));
+}
+
+#login{
+    left: 50px;
+    top : 150px
+}
+
+#register{
+    top : 100px;
+    left:450px;
+}
