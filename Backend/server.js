@@ -14,15 +14,14 @@ app.use(cors(
 
 const port = 5000;
 
-//app.use('/user', userRouter);
+app.use('/user', userRouter);
 
-//app.get('/', (req, res) => {
-    //res.status(200).json("Hello World");
-//})
-
-//app.listen(port, () => {
-   // console.log(`Listening on port ${port}`)
-//})n
+app.get('/', (req, res) => {
+    res.render("Homepage.html");
+})
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`)
+})
 const {createConnection} =require('mysql')
 
 const connect = createConnection({
@@ -33,7 +32,7 @@ const connect = createConnection({
 
 })
 
-connect.query('select * from admin_login', function(err, result, fields) {
+connect.query('select * from admin_login', function(err, result) {
     if (err) {
         return console.log(err);
     }
