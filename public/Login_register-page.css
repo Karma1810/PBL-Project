@@ -22,7 +22,7 @@ body{
     margin: 6% auto;
     background: white;
     padding: 5px;
-    overflow: hidden;
+    overflow: hidden ;
     border-radius: 20px;
 }
 .content .formbx .btn-box{

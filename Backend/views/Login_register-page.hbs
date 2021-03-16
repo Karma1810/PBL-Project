@@ -7,19 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Login_register-page.css">
+    <script>
+        function logItIn() {
+            console.log("login")
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+        function registerItIn() {
+            console.log("register")
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+    </script>
 </head>
 
-<body><div class="content">
+<body>
+    <div class="content">
         <div class="formbx">
             <div class="btn-box">
                 <div id="btn"></div>
-                <button type="button" class="toggle-btn" onclick="login()">Login</button>
-                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                <button type="button" class="toggle-btn" onclick="logItIn()">Login</button>
+                <button type="button" class="toggle-btn" onclick="registerItIn()">Register</button>
             </div>
             <form id="login" class="input-grp">
                 <input type="text" name="name" class="input-field" placeholder="Username">
                 <input type="password" name="password" class="input-field" placeholder="Password">
-                <input type="button" class="submit-btn" value="Sign in"  name="login">
+                <input type="button" class="submit-btn" value="Sign in" name="login">
             </form>
 
             <form id="register" class="input-grp" action="/auth/register" method="POST">
@@ -31,7 +47,7 @@
             </form>
         </div>
     </div>
-    <script src="Login_register-page.js"></script></body>
-    
+</body>
+
 
 </html>
