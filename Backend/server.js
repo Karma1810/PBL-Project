@@ -15,27 +15,16 @@ app.use(cors(
 
 const port = 5000;
 
+app.use('/',require('./routes/user.js'));
+app.use('/auth',require('./routes/auth.js'));
 
 
-//app.get('/loginregister', (req, res) => {
-    
-//})
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
 
 const publicDirectory= path.join(__dirname,'../public');
 app.use(express.static(publicDirectory));
-
-app.get('/',(req,res)=>{
-    res.render('Homepage');
-})
-
-app.get('/Login_register-page',(req,res)=>{
-    res.render('Login_register-page');
-})
-
-
 
 app.set('view engine','hbs');
 
