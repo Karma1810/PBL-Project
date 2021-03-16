@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
+const path= require('path');
 const cors = require('cors');
-const userRouter = require('./routes/user');
+
 
 app.use(express.json());
 app.use(cors(
@@ -14,17 +15,33 @@ app.use(cors(
 
 const port = 5000;
 
-app.use('/user', userRouter);
 
-app.get('/', (req, res) => {
-    res.render("Homepage.html");
-})
+
+//app.get('/loginregister', (req, res) => {
+    
+//})
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
-const {createConnection} =require('mysql')
 
-const connect = createConnection({
+const publicDirectory= path.join(__dirname,'../public');
+app.use(express.static(publicDirectory));
+
+app.get('/',(req,res)=>{
+    res.render('Homepage');
+})
+
+app.get('/Login_register-page',(req,res)=>{
+    res.render('Login_register-page');
+})
+
+
+
+app.set('view engine','hbs');
+
+
+const {createConnection} =require('mysql')
+const db = createConnection({
   host: 'localhost',
   user: 'root',
   password: 'Durban@28',
@@ -32,9 +49,10 @@ const connect = createConnection({
 
 })
 
-connect.query('select * from admin_login', function(err, result) {
-    if (err) {
-        return console.log(err);
+ db.connect((error)=>{
+    if(error){
+        console.log("error")
     }
-    return console.log(result);
-})
+    else console.log("Database connected")
+ })
+   
