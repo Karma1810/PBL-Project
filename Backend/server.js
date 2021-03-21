@@ -17,8 +17,8 @@ const port = 5000;
 
 app.use('/',require('./routes/user.js'));
 app.use('/auth',require('./routes/auth.js'));
-app.use(express.urlencoded({extended:false}))
-app.use(express.json());
+
+
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
