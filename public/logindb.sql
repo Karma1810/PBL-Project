@@ -12,3 +12,18 @@ name,
 password
 )
 values('Rishi Dixit','pass1'),('Atul Gadhari','pass2'),('Tejas Adsare','pass3'),('Prashil Ganvar','pass4');
+
+
+
+
+create database register;
+use register;
+create table user_register(
+id int not null auto_increment,
+name varchar(255) not null,
+email varchar(255) not null,
+password varchar(255) not null,
+repassword varchar(255) not null,
+primary key(id)
+);
+
