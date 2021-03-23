@@ -24,7 +24,7 @@ exports.login = async(req,res) =>{
             console.log(results);
             if(!results || !(await bcrypt.compare(password,results[0].Password))){
                 res.status(401).render('Login_register-page',{
-                    messege: 'Email or Passworrd is Incorrect'
+                    messege: 'Email or Password is Incorrect'
                 })
             }
             else{
@@ -54,7 +54,7 @@ exports.register = (req, res) => {
 
     const { name, email, password, passwordconfirm } = req.body;
 
-    db.query('SELECT email FROM user_register WHERE email = ?', [email], async (error, results) => {
+    db.query('SELECT email FROM users WHERE email = ?', [email], async (error, results) => {
         if (error) {
             console.log(error);
         }
@@ -71,7 +71,7 @@ exports.register = (req, res) => {
         let hashedPassword = await bcrypt.hash(password, 8);
         console.log(hashedPassword);
 
-        db.query('INSERT INTO user_register SET ?', {name: name, email: email ,password: hashedPassword}, (error,results) => {
+        db.query('INSERT INTO users SET ?', {name: name, email: email ,password: hashedPassword}, (error,results) => {
             if(error){
                 console.log(error);
             }
