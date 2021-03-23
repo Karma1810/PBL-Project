@@ -1,14 +1,14 @@
-const router = require('express').Router();
+const express = require("express");
 
-router.route('/login/:username/:password').get((req, res) => {
-    const username = req.params.username;
-    const password = req.params.password;
+const router = express.Router();
 
-    // Search in database
+router.get('/', (req,res) => {
+    res.render('Homepage');
+});
 
-    // If user found
-    console.log("here")
-    res.status(200).json({message : "User logged in!"})
-})
+router.get('/Login_register-page', (req,res) => {
+    res.render('Login_register-page');
+});
+
 
 module.exports = router;

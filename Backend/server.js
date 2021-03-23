@@ -1,41 +1,48 @@
-const express = require('express');
+const express = require("express");
+const mysql = require("mysql");
+const dotenv = require("dotenv");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+
+dotenv.config({
+    path: "./auth.env"
+})
+
 const app = express();
-const cors = require('cors');
-const userRouter = require('./routes/user');
 
+const db = mysql.createConnection({
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
+});
+
+const publicDirectory = path.join(__dirname,'../public');
+app.use(express.static(publicDirectory));
+
+app.use(express.urlencoded({
+    extended: false
+}));
 app.use(express.json());
-app.use(cors(
-    {
-        origin: "*", // allow the server to accept request from different origin
-        methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-     credentials: true // allow session cookie from browser to pass through
-}
-));
 
-const port = 5000;
+app.use(cookieParser());
 
-//app.use('/user', userRouter);
+app.set('view engine', 'hbs');
 
-//app.get('/', (req, res) => {
-    //res.status(200).json("Hello World");
-//})
-
-//app.listen(port, () => {
-   // console.log(`Listening on port ${port}`)
-//})n
-const {createConnection} =require('mysql')
-
-const connect = createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Durban@28',
-  database: 'login',
-
-})
-
-connect.query('select * from admin_login', function(err, result, fields) {
-    if (err) {
-        return console.log(err);
+db.connect((error) => {
+    if(error){
+        console.log(error)
     }
-    return console.log(result);
+    else{
+        console.log("Mysql connected")
+    }
 })
+
+app.use('/', require('./routes/user'));
+
+app.use('/auth' , require('./routes/auth'))
+
+
+app.listen(5000,() => {
+    console.log("server started on port http://localhost:5000");
+});
