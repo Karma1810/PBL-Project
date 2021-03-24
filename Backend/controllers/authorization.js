@@ -20,7 +20,7 @@ exports.login = async(req,res) =>{
             })
         }
 
-        db.query('SELECT * FROM users WHERE email = ?',[email], async(error,results) =>{
+        db.query('SELECT * FROM  WHERE email = ?',[email], async(error,results) =>{
             console.log(results);
             if(!results || !(await bcrypt.compare(password,results[0].Password))){
                 res.status(401).render('Login_register-page',{
@@ -54,7 +54,7 @@ exports.register = (req, res) => {
 
     const { name, email, password, passwordconfirm } = req.body;
 
-    db.query('SELECT email FROM users WHERE email = ?', [email], async (error, results) => {
+    db.query('SELECT email FROM  WHERE email = ?', [email], async (error, results) => {
         if (error) {
             console.log(error);
         }
@@ -71,7 +71,7 @@ exports.register = (req, res) => {
         let hashedPassword = await bcrypt.hash(password, 8);
         console.log(hashedPassword);
 
-        db.query('INSERT INTO users SET ?', {name: name, email: email ,password: hashedPassword}, (error,results) => {
+        db.query('INSERT INTO  SET ?', {name: name, email: email ,password: hashedPassword}, (error,results) => {
             if(error){
                 console.log(error);
             }
