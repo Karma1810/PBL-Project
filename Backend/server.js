@@ -20,8 +20,7 @@ const db = mysql.createConnection({
 const publicDirectory = path.join(__dirname,'../public');
 app.use(express.static(publicDirectory));
 
-const imageDirectory = path.join(__dirname,'../images');
-app.use(express.static(imageDirectory));
+
 
 app.use(express.urlencoded({
     extended: false
