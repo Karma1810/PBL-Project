@@ -21,10 +21,7 @@ const publicDirectory = path.join(__dirname,'../public');
 app.use(express.static(publicDirectory));
 
 
-<<<<<<< HEAD
 app.use(express.static('../images'));
-=======
->>>>>>> 3a627fbf92779df5cf5252c169094e2ad4fe714c
 
 app.use(express.urlencoded({
     extended: false

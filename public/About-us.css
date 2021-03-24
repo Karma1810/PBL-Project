@@ -8,7 +8,7 @@ body{
 }
 .about{
     margin-top: 60px;
-    background: url(./images/AboutUsImage2.jpg) no-repeat left;
+    background: url('AboutUsImage2.jpg') no-repeat left;
     background-size: 59%;
     background-color: #fdfdfd;
     overflow: hidden;
